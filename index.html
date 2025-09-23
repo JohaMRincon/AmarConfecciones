@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Pagina corporativa</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylesFooter.css" />
+  </head>
+  <body>
+    <!-- MENU ENCABEZADO -->
+    <main class="contenedor-header">
+      <header>
+        <div class="logo">
+          <a href="#"><img src="imagenes/logo-sf.png" alt="" /></a>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li><a href="/index.html" onclick="seleccionar()">Inicio</a></li>
+            <li>
+              <a href="/quienesSomos.html" onclick="seleccionar()"
+                >¿Quiénes somos?</a
+              >
+            </li>
+            <li>
+              <a href="/politicas.html" onclick="seleccionar()"
+                >Políticas e Inducciones</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </header>
+    </main>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+      <div class="contenido-banner">
+        <div class="img-circular">
+          <img src="./imagenes/logo-sf.png" alt="..." />
+        </div>
+        <p>
+          <strong>Somos AMAR</strong>, una empresa dedicada a la confección de
+          ropa femenina con un enfoque en la moda casual y contemporánea.<br />
+          Diseñamos prendas para resaltar la esencia, la fuerza y el estilo de
+          la mujer actual.<br /><br />
+
+          Nuestro compromiso va más allá de la industria textil: generamos
+          empleo formal priorizando la vinculación de mujeres cabeza de hogar,
+          aportando al desarrollo económico y al bienestar de muchas
+          familias.<br /><br />
+
+          Combinamos calidad, diseño y responsabilidad social, consolidándonos
+          como un referente de empoderamiento femenino tanto en nuestros
+          productos como en nuestro equipo humano.
+        </p>
+      </div>
+    </section>
+    <!-- Seccion Footer -->
+    <footer class="footer-section">
+      <!-- Seccion de logo - informacion respecto a la marca -->
+      <section class="footer-final-section">
+        <!-- Logo y Nombre de la Marca -->
+        <div class="footer-logo-container">
+          <img src="/imagenes/logoclaro2.png" alt="Logo amar" />
+        </div>
+        <!-- Opciones de Ayuda -->
+        <div class="footer-elements-container">
+          <div id="ayuda-footer" class="footer-elements">
+            <p>Ayuda</p>
+            <ul class="footer-elements-list">
+              <li>
+                <a href="" target="_blank">Devoluciones</a>
+              </li>
+              <li>
+                <a href="" target="_blank">Atención al cliente</a>
+              </li>
+              <li>
+                <a href="files/peticiones.pdf" download="peticiones.pdf"
+                  >Peticiones</a
+                >
+              </li>
+              <li>
+                <a href="files/peticiones.pdf" download="peticiones.pdf"
+                  >Quejas y Reclamos</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Acceso a las secciones de la pagina de Elevia -->
+        <div class="footer-elements-container">
+          <div id="nosotros-footer" class="footer-elements">
+            <p>Nosotros</p>
+            <ul class="footer-elements-list">
+              <li><a href="Catalogo/catalog.html">Productos</a></li>
+              <li><a href="index.html">Empoderate</a></li>
+              <li><a href="aboutUs.html">Quiénes Somos</a></li>
+              <li><a href="contact.html">Contáctanos</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-elements-container">
+          <div id="elevia-footer" class="footer-elements">
+            <p></p>
+            <ul class="footer-elements-list">
+              <li>
+                "Empoderamos tu estilo, realzamos tu esencia y reflejamos tu
+                belleza en cada detalle."
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer seccion Todos los derechos reservados - Fin de pagina -->
+      </section>
+      <section class="footer-bottom-section">
+        <div>
+          <p id="rights-reserved">
+            &copy; 2025 Amar - Todos los derechos reservados.
+          </p>
+        </div>
+        <div class="footer-info-container">
+          <p>
+            <a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"
+              ><i class="fab fa-instagram" target="_blank"></i
+            ></a>
+          </p>
+          <p>
+            <a href="" target="_blank"><i class="fab fa-facebook"></i> </a>
+          </p>
+          <p>
+            <a href="" target="_blank"><i class="fab fa-whatsapp"></i> </a>
+          </p>
+          <p>
+            <a href="mailto:elevia.contact@gmail.com" target="_blank"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

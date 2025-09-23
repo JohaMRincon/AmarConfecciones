@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  background-color: #f8f4f1;
+}
+/* MENU */
+.contenedor-header {
+  background: #e8d6d6;
+  position: fixed;
+  width: 98%;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+.contenedor-header header {
+  width: 100%;
+  max-width: 2560px;
+  margin: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-top: 5px;
+  color: #a68888;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+  display: block;
+  margin-bottom: 5px;
+}
+.contenedor-header header ul {
+  display: flex;
+  list-style: none;
+}
+.contenedor-header header nav ul li a {
+  text-align: none;
+  color: #a68888;
+  margin: 0 20px;
+  padding: 7px;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover {
+  color: #31081f;
+}
+.nav-responsive {
+  background-color: #31081f;
+  color: #a68888;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+/* SECCION I N I C I O */
+.inicio {
+  background-color: #f8f4f1;
+  background-size: cover;
+  height: 100vh;
+  color: #66999b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inicio .contenido-banner {
+  padding: 20px;
+  background: linear-gradient(
+      to top,
+      rgba(232, 214, 214, 0.8),
+      rgba(232, 214, 214, 1)
+    ),
+    url(./imagenes/fondo\ hojas.png);
+  background-size: 100% 100%;
+  background-position: center;
+  width: 98%;
+  margin: auto;
+  text-align: center;
+  border-radius: 10px;
+  align-items: center;
+  height: 82%;
+  max-height: 550px;
+  margin-top: 6rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+.img-circular {
+  width: 250px;
+  height: 250px;
+  background: #f8f4f1;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.img-circular img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.inicio .contenido-banner p {
+  font-size: 15px;
+  font-weight: normal;
+  color: #a68888;
+  padding: 10px;
+}
+.inicio .contenido-banner .redes a {
+  color: #f4ece0;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #f4ece0;
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 40px 5px;
+  font-size: 20px;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+.inicio .contenido-banner .redes a:hover {
+  background-color: #66999b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contenedor-header {
+    width: 100%;
+    padding: 0 5px;
+  }
+  .contenedor-header header {
+    flex-direction: column;
+    padding: 0 5px;
+    margin-top: 0;
+  }
+  .contenedor-header header ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenedor-header header nav ul li a {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1.1em;
+  }
+  .logo img {
+    max-width: 60px;
+  }
+  .inicio {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
+  .inicio .contenido-banner {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    padding: 10px;
+  }
+  .img-circular {
+    width: 150px;
+    height: 150px;
+  }
+  .img-circular img {
+    width: 150px;
+    height: 150px;
+  }
+  .inicio .contenido-banner p {
+    font-size: 14px;
+    padding: 5px;
+  }
+  .inicio .contenido-banner .redes a {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 18px;
+    margin: 20px 3px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contenedor-header {
+    width: 100%;
+    border-radius: 0;
+    top: 0;
+    padding: 0 2px;
+  }
+  .logo img {
+    max-width: 40px;
+  }
+  .img-circular {
+    width: 100px;
+    height: 100px;
+  }
+  .img-circular img {
+    width: 100px;
+    height: 100px;
+  }
+  .inicio .contenido-banner {
+    padding: 5px;
+    margin-top: 1rem;
+  }
+  .inicio .contenido-banner p {
+    font-size: 12px;
+    padding: 2px;
+  }
+  .inicio .contenido-banner .redes a {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    margin: 10px 2px;
+  }
+}

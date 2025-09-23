@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+}
+html {
+  /* me permite deslizar cuando hago clic en los links del menu */
+  scroll-behavior: smooth;
+  background-color: #f8f4f1;
+}
+/* MENU */
+.contenedor-header {
+  background: #e8d6d6;
+  position: fixed;
+  width: 98%;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+.contenedor-header header {
+  width: 100%;
+  max-width: 2560px;
+  margin: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-top: 5px;
+  color: #a68888;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+  display: block;
+  margin-bottom: 5px;
+}
+.contenedor-header header ul {
+  display: flex;
+  list-style: none;
+}
+.contenedor-header header nav ul li a {
+  text-align: none;
+  color: #a68888;
+  margin: 0 20px;
+  padding: 7px;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover {
+  color: #31081f;
+}
+.nav-responsive {
+  background-color: #31081f;
+  color: #a68888;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+/*Seccion sobre mi*/
+.sobremi {
+  background-color: #f8f4f1;
+  color: #f4ece0;
+  padding: 70px 5px;
+}
+.sobremi .contenido-seccion {
+  max-width: 2560px;
+  margin: auto;
+  padding: 40px 50px;
+}
+.sobremi h2 {
+  font-size: 48px;
+  font-family: "Playfair Display", sans-serif;
+  text-align: center;
+  padding: 5px 0;
+  color: #a68888;
+}
+.sobremi .contenido-seccion p {
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 15px;
+  margin-top: 3px !important;
+  text-align: justify;
+  color: #a68888;
+}
+
+.sobremi .fila {
+  display: flex;
+}
+.sobremi .fila .col {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.sobremi .fila .col h3 {
+  font-size: 28px;
+  font-family: "Playfair Display", sans-serif;
+  margin-bottom: 25px;
+  color: #a68888;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.sobremi .fila .col .contenedor-intereses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.sobremi .fila .col .contenedor-intereses .intereses {
+  flex-basis: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  height: 38px;
+  background-color: #a68888;
+  border-radius: 10px;
+  margin: 0 15px 15px 0;
+  padding: 21px;
+  transition: 0.3s;
+  color: #f8f4f1;
+  text-decoration: none;
+}
+
+.sobremi .fila .col .contenedor-intereses .intereses:hover {
+  background-color: #31081f;
+}
+
+.sobremi .fila .col .contenedor-intereses .intereses .material-icons {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.sobremi .fila .col .contenedor-intereses .intereses span {
+  font-size: 16px;
+  color: #f4ece0;
+}
+
+.sobremi .fila .col .contenedor-pasatiempos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.sobremi .fila .col .contenedor-pasatiempos .pasatiempos {
+  flex-basis: 22%;
+  width: 100px;
+  height: 100px;
+  background-color: #a68888;
+  border-radius: 10px;
+  margin: 0 15px 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.3s;
+  color: #f8f4f1;
+  text-decoration: none;
+  font-size: 10px;
+}
+.sobremi .fila .col .contenedor-pasatiempos .pasatiempos:hover {
+  background-color: #31081f;
+}
+
+.sobremi .fila .col .contenedor-pasatiempos .pasatiempos .material-icons {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.sobremi .fila .col .contenedor-pasatiempos .pasatiempos span {
+  font-size: 10px;
+  color: #f8f4f1;
+  text-decoration: none;
+}
+
+.sobremi button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #f4ece0;
+  width: fit-content;
+  display: block;
+  margin: 15px auto;
+  padding: 10px 22px;
+  font-size: 16px;
+  position: relative;
+  z-index: 10;
+}
+.sobremi button a {
+  text-decoration: none;
+  color: #f4ece0;
+}
+
+.sobremi button .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #66999b;
+  z-index: -1;
+  transition: 1s;
+}
+.sobremi button:hover .overlay {
+  width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contenedor-header {
+    width: 100%;
+    padding: 0 5px;
+  }
+  .contenedor-header header {
+    flex-direction: column;
+    padding: 0 5px;
+    margin-top: 0;
+  }
+  .logo img {
+    max-width: 60px;
+  }
+  .sobremi {
+    padding: 40px 2px;
+  }
+  .sobremi .contenido-seccion {
+    padding: 20px 10px;
+  }
+  .sobremi h2 {
+    font-size: 32px;
+  }
+  .sobremi .fila {
+    flex-direction: column;
+  }
+  .sobremi .fila .col {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .sobremi .fila .col h3 {
+    font-size: 22px;
+  }
+  .sobremi .fila .col .contenedor-intereses .intereses,
+  .sobremi .fila .col .contenedor-pasatiempos .pasatiempos {
+    width: 80px;
+    height: 60px;
+    font-size: 9px;
+    margin: 0 8px 8px 0;
+    padding: 10px;
+  }
+  .sobremi .fila .col .contenedor-pasatiempos .pasatiempos .material-icons {
+    font-size: 28px;
+  }
+  .sobremi .fila .col .contenedor-pasatiempos .pasatiempos span {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contenedor-header {
+    width: 100%;
+    border-radius: 0;
+    top: 0;
+    padding: 0 2px;
+  }
+  .logo img {
+    max-width: 40px;
+  }
+  .sobremi {
+    padding: 20px 1px;
+  }
+  .sobremi .contenido-seccion {
+    padding: 10px 2px;
+  }
+  .sobremi h2 {
+    font-size: 22px;
+  }
+  .sobremi .fila .col h3 {
+    font-size: 16px;
+  }
+  .sobremi .fila .col .contenedor-intereses .intereses,
+  .sobremi .fila .col .contenedor-pasatiempos .pasatiempos {
+    width: 60px;
+    height: 40px;
+    font-size: 7px;
+    margin: 0 5px 5px 0;
+    padding: 5px;
+  }
+  .sobremi .fila .col .contenedor-pasatiempos .pasatiempos .material-icons {
+    font-size: 18px;
+  }
+  .sobremi .fila .col .contenedor-pasatiempos .pasatiempos span {
+    font-size: 6px;
+  }
+}

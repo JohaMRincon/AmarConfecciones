@@ -7,6 +7,14 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #f8f4f1 !important;
 }
+.nav-responsive {
+  background-color: #e8d6d6;
+  color: #a68888;
+  margin-top: -8px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
 .inicial-banner {
   margin-top: 6%;
   color: #f8f4f1;
@@ -22,25 +30,25 @@ body {
 .inicial-banner h1 {
   background-color: rgba(166, 136, 136, 0.8);
   position: absolute;
-  top: 50% !important;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #f8f4f1; /* Ajusta el color del texto */
-  font-size: 5em; /* Ajusta el tamaño del texto */
+  font-size: 4rem; /* Ajusta el tamaño del texto */
   text-align: center; /* Centra el texto */
   text-shadow: 5px 5px 10px black;
   border: 3px solid #f8f4f1;
-  padding: 4rem 4rem;
+  padding: 2rem 2rem;
   box-shadow: 0 0 25px #222;
 }
 .inicial-banner p {
   position: absolute;
-  top: 70% !important;
+  top: 60% !important;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #a68888;
   text-shadow: 7px 7px 10px gray;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 /* Seccion de quienes somos */
@@ -289,45 +297,71 @@ body {
   background-color: #e8d6d6; /* Oscurece el color al pasar el cursor */
   transform: scale(1.1); /* Efecto de zoom */
 }
-/* Estilos generales para pantallas pequeñas hasta 2560px */
+
+/* SECCION RESPONSIVE */
 @media (max-width: 2560px) {
+  .inicial-banner {
+    display: flex;
+    flex-direction: column; /* coloca h1 y p en columna */
+    justify-content: center; /* centra vertical */
+    align-items: center; /* centra horizontal */
+    text-align: center; /* centra texto dentro */
+    height: 50vh; /* ajusta si tu banner ocupa pantalla */
+  }
   .inicial-banner h1 {
     top: 30%;
     padding: 4rem 6rem;
     font-size: 3.3em;
+    margin: 0;
   }
   .inicial-banner p {
-    top: 46%;
+    margin: 0;
     font-size: 2rem;
+    margin-top: -10rem; /* espacio debajo del h1 */
+  }
+  .quienes-somos-container {
+    flex-direction: row;
+    margin-top: -4rem; /* controla separación desde el banner */
   }
 }
 
 /* Ajustes para pantallas hasta 1440px */
 @media (max-width: 1440px) {
+  .inicial-banner {
+    margin-top: 9%;
+  }
   .inicial-banner h1 {
-    padding: 2rem 3rem;
+    padding: 3rem 5rem;
     font-size: 3em;
+    margin-top: 4rem;
   }
   .inicial-banner p {
     font-size: 1.3rem;
+    margin-top: -5rem;
+  }
+
+  .quienes-somos-container {
+    flex-direction: row;
+    margin-top: 0rem; /* controla separación desde el banner */
   }
 }
 
 /* Ajustes para pantallas medianas (1024px o menos) */
 @media (max-width: 1024px) {
   .inicial-banner {
-    margin-top: 11%;
+    margin-top: 9%;
   }
   .inicial-banner h1 {
-    padding: 1rem 3rem;
-    font-size: 2em;
+    padding: 3rem 5rem;
+    font-size: 3em;
+    margin-top: 4rem;
   }
   .inicial-banner p {
-    top: 42% !important;
     font-size: 1.3rem;
+    margin-top: -5rem;
   }
   .quienes-somos-info p {
-    font-size: 1rem;
+    font-size: 3rem;
   }
   .imagen1 img {
     width: 60%;
@@ -340,13 +374,14 @@ body {
 }
 
 /* Ajustes para pantallas menores a 884px */
-@media (max-width: 884px) {
+@media (min-width: 768px) and (max-width: 1020px) {
   .inicial-banner {
-    margin-top: 14%;
+    margin-top: -5rem;
+    height: 50vh;
   }
   .inicial-banner h1 {
-    top: 25% !important;
-    padding: 1rem 2rem;
+    top: 17% !important;
+    padding: 2rem 3rem;
     font-size: 2em;
   }
   .inicial-banner p {
@@ -355,6 +390,7 @@ body {
   }
   .quienes-somos-container {
     flex-direction: column;
+    margin-top: -7rem; /* controla separación desde el banner */
   }
   .quienes-somos-info {
     margin-left: 0;
@@ -413,6 +449,27 @@ body {
 
 /* Ajustes para pantallas pequeñas (hasta 480px) */
 @media (max-width: 480px) {
+  .inicial-banner {
+    margin-top: -6rem !important;
+  }
+  .inicial-banner h1 {
+    margin-top: 1rem !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.5em;
+  }
+  .inicial-banner p {
+    margin-top: 2rem !important;
+    font-size: 0.5rem;
+  }
+  .quienes-somos-container {
+    flex-direction: column;
+    margin-top: -5rem; /* controla separación desde el banner */
+  }
+  .imagen1 img {
+    width: 18rem;
+    height: 9rem;
+    object-fit: cover;
+  }
   #initialTittle {
     font-size: 1.5rem;
   }
@@ -428,8 +485,8 @@ body {
     width: 65%;
   }
   .ourPeople-member img {
-    width: 9rem;
-    height: 9rem;
+    width: auto;
+    height: auto;
   }
   .btn {
     width: 40px;
@@ -456,6 +513,22 @@ body {
 
 /* Ajustes para pantallas muy pequeñas (hasta 428px) */
 @media (max-width: 428px) {
+  .inicial-banner {
+    margin-top: -7rem !important;
+  }
+  .inicial-banner h1 {
+    margin-top: 0.5rem !important;
+    padding: 0rem 1rem !important;
+    font-size: 0.5em;
+  }
+  .inicial-banner p {
+    margin-top: 2rem !important;
+    font-size: -1rem;
+  }
+  .quienes-somos-container {
+    flex-direction: column;
+    margin-top: -7rem; /* controla separación desde el banner */
+  }
   #mision-vision-valores {
     flex-direction: column;
     padding: 20px;
@@ -465,21 +538,10 @@ body {
     font-size: 2rem;
   }
   #mision-vision-valores #vision {
-    border-top: 2px solid #e8d6d6;
+    border-top: 2px solid #ffffff;
     border-left: none;
   }
-  .inicial-banner {
-    margin-top: 25%;
-  }
-  .inicial-banner h1 {
-    top: 21% !important;
-    padding: 0.5rem 1rem;
-    font-size: 1em;
-  }
-  .inicial-banner p {
-    top: 27% !important;
-    font-size: 0.6rem;
-  }
+
   .quienes-somos-info #know-more {
     font-size: 0.7rem;
     margin-top: 10px;
@@ -488,6 +550,11 @@ body {
     font-size: 0.8rem;
     line-height: 1.5rem;
     padding-top: 10%;
+  }
+  .imagen1 img {
+    width: 18rem;
+    height: 9rem;
+    object-fit: cover;
   }
 }
 
@@ -517,5 +584,51 @@ body {
   .ourPeople-member img {
     width: 9rem;
     height: 9rem;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  nav {
+    display: none;
+  }
+  .nav-responsive {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 101;
+  }
+  nav.responsive {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    background-color: #e8d6d6 !important;
+    width: 100%;
+    z-index: 100;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  nav.responsive ul {
+    display: block !important;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  nav.responsive ul li {
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .logo img {
+    max-width: 70px;
+  }
+
+  .quienes-somos-info #know-more {
+    display: block; /* hace que se comporte como bloque */
+    width: 100%; /* ocupa todo el ancho del contenedor */
+    text-align: center; /* opcional, para centrar el texto */
+    padding: 10px 0; /* ajusta la altura si quieres */
+    font-size: 15px; /* ajusta el tamaño de la fuente */
   }
 }

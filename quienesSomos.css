@@ -16,7 +16,7 @@ body {
   display: none;
 }
 .inicial-banner {
-  margin-top: 6%;
+  margin-top: 10% !important;
   color: #f8f4f1;
   position: static;
   background-color: #f8f4f1;
@@ -30,7 +30,7 @@ body {
 .inicial-banner h1 {
   background-color: rgba(166, 136, 136, 0.8);
   position: absolute;
-  top: 45%;
+  top: 35% !important;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #f8f4f1; /* Ajusta el color del texto */
@@ -38,12 +38,12 @@ body {
   text-align: center; /* Centra el texto */
   text-shadow: 5px 5px 10px black;
   border: 3px solid #f8f4f1;
-  padding: 2rem 2rem;
+  padding: 3rem 5rem !important;
   box-shadow: 0 0 25px #222;
 }
 .inicial-banner p {
   position: absolute;
-  top: 60% !important;
+  top: 80% !important;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #a68888;
@@ -64,6 +64,7 @@ body {
   justify-content: center;
   color: #a68888;
   padding: 5%;
+  margin-top: 2rem !important;
 }
 
 .quienes-somos-info {
@@ -328,7 +329,7 @@ body {
 /* Ajustes para pantallas hasta 1440px */
 @media (max-width: 1440px) {
   .inicial-banner {
-    margin-top: 5%;
+    margin-top: 5% !important;
   }
   .inicial-banner h1 {
     padding: 3rem 5rem;
@@ -347,80 +348,6 @@ body {
 }
 
 /* Ajustes para pantallas medianas (1024px o menos) */
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .inicial-banner {
-    margin-top: -5rem;
-    height: 50vh;
-    color: red !important;
-  }
-  .inicial-banner h1 {
-    top: 17% !important;
-    padding: 2rem 3rem;
-    font-size: 2em;
-  }
-  .inicial-banner p {
-    top: 35% !important;
-    font-size: 1rem;
-  }
-  .quienes-somos-container {
-    flex-direction: column;
-    margin-top: -7rem; /* controla separación desde el banner */
-  }
-  .quienes-somos-info {
-    margin-left: 0;
-    text-align: center;
-    max-width: 500px;
-  }
-  .quienes-somos-info p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    padding-top: 10%;
-  }
-  .imagen1 img {
-    width: 20rem;
-    height: 10rem;
-    object-fit: cover;
-  }
-  #initialTittle {
-    font-size: 1.8rem;
-  }
-  #mision-vision-valores h2 {
-    font-size: 2.5rem;
-  }
-  .inicial-banner img {
-    width: 100%;
-    height: 350px;
-  }
-  .ourPeople-container {
-    gap: 15px;
-  }
-  .ourPeople-member {
-    width: 200px;
-    padding: 15px;
-  }
-  .ourPeople-member img {
-    width: 8rem;
-    height: 8rem;
-  }
-  .btn {
-    width: 45px;
-    height: 45px;
-  }
-  .btn i {
-    font-size: 20px;
-  }
-  .quienes-somos-title {
-    width: 60%;
-    font-size: 36px !important;
-  }
-
-  .inicial-banner p {
-    text-align: center;
-    font-size: 22px !important;
-    margin: 15px 0;
-  }
-}
 
 /* Ajustes para pantallas pequeñas (hasta 480px) */
 @media (max-width: 480px) {

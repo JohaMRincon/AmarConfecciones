@@ -165,13 +165,37 @@
               >
                 Politicas de Tecnologia y Seguridad de la Informacion
               </a>
-              <a
-                class="pasatiempos"
-                href="documentos/codigo vestimenta.pdf"
-                target="_blank"
-              >
-                Politicas de Vestimenta y Etiqueta Corporativa
+              <a class="pasatiempos" href="#" id="abrir-pdfs">
+                Políticas de Vestimenta y Etiqueta Corporativa
               </a>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  const enlace = document.getElementById("abrir-pdfs");
+
+                  enlace.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    const archivos = [
+                      "documentos/codigo vestimenta.pdf",
+                      "documentos/formato entrega de dotacion.pdf",
+                    ];
+
+                    archivos.forEach(function (archivo) {
+                      const url = encodeURI(archivo);
+                      const win = window.open("about:blank", "_blank");
+                      if (win) {
+                        win.location.href = url;
+                      } else {
+                        console.warn(
+                          "Popup bloqueado o no se pudo abrir ventana para:",
+                          url
+                        );
+                      }
+                    });
+                  });
+                });
+              </script>
             </div>
           </div>
         </div>
